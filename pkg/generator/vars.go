@@ -69,7 +69,7 @@ func Generate(tfFiles []string, varsDstFile string, localsDstFile string, varsDe
 	go func() {
 		for text := range messages {
 			t.matchVarPref(text, varPrefix)
-			t.matchLocalPref(text, localPrefix)
+			// t.matchLocalPref(text, localPrefix)
 		}
 	}()
 	wg.Wait()

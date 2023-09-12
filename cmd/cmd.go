@@ -38,7 +38,7 @@ func Execute(version string) {
 	}
 
 	cmd.PersistentFlags().BoolVar(&vars, "vars", true, "generate variables")
-	cmd.PersistentFlags().BoolVar(&varsDescription, "vars-description", true, "include description on variables")
+	cmd.PersistentFlags().BoolVar(&varsDescription, "vars-description", false, "include description on variables")
 	cmd.PersistentFlags().StringVar(&varsFile, "vars-file", "./variables.tf", "path to generated variables file")
 	cmd.PersistentFlags().StringVar(&localsFile, "locals-file", "./locals.tf", "path to generated locals file")
 
